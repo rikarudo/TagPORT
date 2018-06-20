@@ -20,7 +20,7 @@ public class PoSTaggerExample {
       e.printStackTrace();
     }
 
-    String[] tokens = {"Era", "uma", "vez", "um", "gato", "maltês", ",", "que",
+    String[] tokens = {"Era", "uma", "vez", "um", "gato", "maltês", ",", 
         "tocava", "piano", "e", "falava", "francês", "."};
     String[] tags = tagger.tag(tokens);
 

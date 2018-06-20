@@ -8,16 +8,16 @@ import java.util.InvalidPropertiesFormatException;
 import opennlp.tools.postag.POSModel;
 import opennlp.tools.postag.POSTaggerME;
 import opennlp.tools.util.InvalidFormatException;
-import token.TaggedToken;
 
 /**
  * This class ...
  *
  * @author   Ricardo Rodrigues
- * @version  0.9.4
+ * @version  0.9.9
  */
 public class POSTagger {
-  private static final String DEFAULT_PROP = "resources/properties/tagport.xml";
+  private static final String DEFAULT_PROP =
+      "resources/config/tagport.properties";
 
   private POSTaggerME tagger = null;
 
@@ -29,7 +29,7 @@ public class POSTagger {
    */
   public POSTagger() throws InvalidPropertiesFormatException, IOException {
     Properties properties = new Properties();
-    properties.loadFromXML(
+    properties.load(
         this.getClass().getClassLoader().getResourceAsStream(DEFAULT_PROP));
     this.tagger = new POSTaggerME(new POSModel(
         this.getClass().getClassLoader().getResourceAsStream(
@@ -39,13 +39,13 @@ public class POSTagger {
   /**
    * Creates a new <code>POSTagger</code> object ...
    * 
-   * @param  posModelInput ...
+   * @param  posModel ...
    * @throws InvalidFormatException ...
    * @throws IOException ...
    */
-  public POSTagger(InputStream posModelInput)
+  public POSTagger(InputStream posModel)
       throws InvalidFormatException, IOException {
-    this.tagger = new POSTaggerME(new POSModel(posModelInput));
+    this.tagger = new POSTaggerME(new POSModel(posModel));
   }
 
   /**

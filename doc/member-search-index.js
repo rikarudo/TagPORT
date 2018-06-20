@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"examples","c":"PoSTaggerExample","l":"main(String[])","url":"main-java.lang.String:A-"},{"p":"examples","c":"PoSTaggerExample","l":"PoSTaggerExample()"}]
