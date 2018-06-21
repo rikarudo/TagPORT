@@ -1,1 +1,1 @@
-typeSearchIndex = [{"p":"examples","l":"PoSTaggerExample"}]
+typeSearchIndex = [{"p":"pos","l":"POSTagger"},{"p":"examples","l":"PoSTaggerExample"},{"p":"replacement","l":"Replacement"},{"p":"pos","l":"TaggedToken"},{"p":"token","l":"TaggedToken"}]
